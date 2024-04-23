@@ -26,10 +26,10 @@ configfile = os.path.join(HERE_PATH, 'robot_config.json')
 cmdMng = CommandManager.from_configfile(configfile)
 
 MICROSTEP = 32.0
-LINEAR_STEPPER_UNIT_PER_STEP = 0.05  # 08  # mm/step
+LINEAR_STEPPER_UNIT_PER_STEP = 0.05  # 08  # mm/step 丝杠行程
 SYRINGUE_UNIT_PER_MM = 250 / 59.70  # 59.70mm for 250ul
 
-X = Axis(cmdMng.X, 0.00935, 0, 160)
+X = Axis(cmdMng.X, 0.00935, 0, 160)  #(目标device的json，mm/step，最小位置，最大位置)
 Y = Axis(cmdMng.Y, 0.00935, 0, 100)
 Z = Axis(cmdMng.Z, 0.00125, 0, 156)
 XY = MultiAxis(X, Y)
